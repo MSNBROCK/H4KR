@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WhatsApp Security Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="notice">FICTIONAL DEMO • NO REAL WHATSAPP ACCESS OR DATA RETRIEVAL</div>
+<main class="card" id="login">
+  <div class="badge">H4K SECURITY LAB</div>
+  <h1>WhatsApp Security Simulator</h1>
+  <p class="muted">Professional training/demo interface</p>
+  <label>Login ID</label><input id="user" placeholder="Enter ID">
+  <label>Password</label><input id="pass" type="password" placeholder="Enter password">
+  <div class="fee">Entry Fee: ₹5,000 <span>DEMO</span></div>
+  <button onclick="login()">ENTER SIMULATOR</button>
+  <p id="err" class="error"></p>
+</main>
+
+<main class="dashboard hidden" id="dash">
+  <header><div><b>H4K SECURITY LAB</b><small>SIMULATION MODE</small></div><button class="logout" onclick="location.reload()">Logout</button></header>
+  <section class="panel">
+    <h2>Phone Security Scan</h2>
+    <p class="muted">Enter a number to start a simulated 72-hour+ process.</p>
+    <div class="row"><input id="phone" placeholder="+91 XXXXX XXXXX"><button onclick="startScan()">START SIMULATION</button></div>
+    <div id="scan" class="hidden">
+      <div class="stage" id="stage">Initializing simulation…</div>
+      <div class="bar"><i id="bar"></i></div>
+      <div class="percent" id="percent">0%</div>
+      <div class="timer">SIMULATED PROCESSING: <span id="time">72:00:00</span>+</div>
+    </div>
+  </section>
+  <section class="grid">
+    <div class="panel"><h3>💬 Chat Demo</h3><p>Sample conversation data only.</p><div class="fakechat">Ibrahim: Hello 👋<br>Wazeefa: Hi! This is a demo chat.</div></div>
+    <div class="panel"><h3>📞 Call History Demo</h3><p>Sample calls only.</p><div class="fakechat">Incoming • 04:32<br>Outgoing • 12:18<br>Missed • 01:07</div></div>
+    <div class="panel"><h3>🎙 Audio Demo</h3><p>No real recordings are accessed.</p><button onclick="alert('Demo audio only — no real recording available.')">PLAY DEMO</button></div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
